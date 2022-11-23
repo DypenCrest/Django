@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+    {% block content %}
+    <ul class="list-group mx-auto">
+      <li class="list-group-item">
+      <p class="list-head" style="color:green">List of Items</p>
+      </li>
+    </ul>
+    {% for list in lists %}
+    <ul class="list-group mx-auto">
+      <li class="list-group-item">
+        <input class="form-check-input me-4 ms-auto" type="checkbox" value="" id="{{list.name}}">
+        <label class="form-check-label" for="{{list.name}}">
+        <div class="fnt" id="btm">{{list.name}}</div>
+        </label>
+        <a class="btn btn-warning me-5" href="list-update/{{ list.pk }}/" role="button" id="btm2"><img src="{% static 'img/edit.png' %}"></a>
+        <a class="btn btn-danger me-3" href="list-delete/{{ list.pk }}/" role="button" id="btm1"><img src="{% static 'img/del.png' %}"></a>
+      </li>
+    </ul>
+    {% endfor %}
+    <ul class="list-group mx-auto">
+      <li class="list-group-item">
+        <a class="btn btn-outline-success me-3" href="list-add/" role="button" id=""><img src="{% static 'img/add.ico' %}" width="25px" height="25px"></a>
+      </li>
+    </ul>
+  {% endblock content %}

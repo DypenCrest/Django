@@ -1,0 +1,38 @@
+input.form-check-input {
+  width: 40px;
+  height: 40px;
+}
+
+.fnt{
+  font-size:1.4rem;
+}
+
+#btm {
+  position: absolute;
+  bottom: 0;
+}
+
+#btm1 {
+  position: absolute;
+  right: 0;
+}
+
+#btm2 {
+  position: absolute;
+  right: 5%;
+}
+
+.btn-outline-success{
+  width:450px;
+}
+
+.list-group{
+  width:480px;
+}
+
+.list-head{
+  font-size:1.6rem;
+  font-weight:bold;
+  color:green;
+}
+

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<ul class="list-group mx-auto">
+  <li class="list-group-item">
+    <form class="row g-3" action="" method="post">
+      {% csrf_token %}
+        <div class="col-md-12">
+          <label for="list" class="list-head">Item Name</label>
+          <input type="text" class="form-control" id="list" value="{{list.name}}" name="name">
+        </div>
+        <button class="btn btn-success" type="submit"><img src="{% static 'img/save.png' %}"></button>
+    </form>
+  </li>
+</ul>
+{% endblock content %}
